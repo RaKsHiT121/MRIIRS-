@@ -1,0 +1,153 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Query Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+        }
+        
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .sidebar {
+            width: 30%;
+            background-color: #075e54;
+            color: white;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .sidebar h2 {
+            margin-top: 0;
+        }
+        
+        .query-item {
+            list-style: none;
+            padding: 10px;
+            background: #128C7E;
+            margin: 5px 0;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        .query-item:hover {
+            background: #25D366;
+        }
+        
+        .chat-container {
+            flex: 1;
+            background: white;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chat-header {
+            background: #075e54;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .chat-box {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #e5ddd5;
+        }
+        
+        .message {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+            max-width: 70%;
+        }
+        
+        .sent {
+            background: #dcf8c6;
+            align-self: flex-end;
+            text-align: right;
+        }
+        
+        .received {
+            background: white;
+        }
+        
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            background: #ffffff;
+            border-top: 1px solid #ddd;
+        }
+        
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .chat-input button {
+            padding: 10px 20px;
+            background: #128C7E;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Assigned Queries</h2>
+            <ul id="query-list">
+                <li class="query-item" onclick="openChat('Query 1')">Query 1</li>
+                <li class="query-item" onclick="openChat('Query 2')">Query 2</li>
+                <li class="query-item" onclick="openChat('Query 3')">Query 3</li>
+            </ul>
+        </div>
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2 id="chat-title">Select a Query</h2>
+            </div>
+            <div class="chat-box" id="chat-box">
+                <p class="message received">Student: How do I submit my documents?</p>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="message-input" placeholder="Type your reply...">
+                <button onclick="sendMessage()">Reply</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openChat(queryTitle) {
+            document.getElementById("chat-title").innerText = queryTitle;
+            document.getElementById("chat-box").innerHTML = `<p class="message received">Student: What is the status of my query?</p>`;
+        }
+
+        function sendMessage() {
+            let message = document.getElementById("message-input").value;
+            if (message.trim() !== "") {
+                let chatBox = document.getElementById("chat-box");
+                let newMessage = `<p class="message sent">You: ${message}</p>`;
+                chatBox.innerHTML += newMessage;
+                document.getElementById("message-input").value = "";
+            }
+        }
+    </script>
+</body>
+</html> 

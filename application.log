@@ -1,0 +1,40 @@
+2025-04-01T10:39:02.363+05:30  INFO 17736 --- [MRIIRS] [main] com.example.MRIIRS.MriirsApplication     : Starting MriirsApplication using Java 21.0.6 with PID 17736 (C:\Users\useer\Desktop\MRIIRSch\target\classes started by useer in C:\Users\useer\Desktop\MRIIRSch)
+2025-04-01T10:39:02.385+05:30  INFO 17736 --- [MRIIRS] [main] com.example.MRIIRS.MriirsApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-04-01T10:39:03.763+05:30  INFO 17736 --- [MRIIRS] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-01T10:39:03.911+05:30  INFO 17736 --- [MRIIRS] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127 ms. Found 5 JPA repository interfaces.
+2025-04-01T10:39:05.024+05:30  INFO 17736 --- [MRIIRS] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-01T10:39:05.052+05:30  INFO 17736 --- [MRIIRS] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-01T10:39:05.053+05:30  INFO 17736 --- [MRIIRS] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-01T10:39:05.159+05:30  INFO 17736 --- [MRIIRS] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-01T10:39:05.160+05:30  INFO 17736 --- [MRIIRS] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2655 ms
+2025-04-01T10:39:05.433+05:30  INFO 17736 --- [MRIIRS] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-01T10:39:05.533+05:30  INFO 17736 --- [MRIIRS] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-01T10:39:05.604+05:30  INFO 17736 --- [MRIIRS] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-01T10:39:06.157+05:30  INFO 17736 --- [MRIIRS] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-01T10:39:06.218+05:30  INFO 17736 --- [MRIIRS] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-01T10:39:06.902+05:30  INFO 17736 --- [MRIIRS] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64757d56
+2025-04-01T10:39:06.908+05:30  INFO 17736 --- [MRIIRS] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-01T10:39:07.068+05:30  WARN 17736 --- [MRIIRS] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-01T10:39:07.077+05:30  WARN 17736 --- [MRIIRS] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-01T10:39:07.154+05:30  INFO 17736 --- [MRIIRS] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-01T10:39:08.642+05:30  INFO 17736 --- [MRIIRS] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-01T10:39:08.863+05:30  INFO 17736 --- [MRIIRS] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01T10:39:09.417+05:30  INFO 17736 --- [MRIIRS] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-01T10:39:10.339+05:30  WARN 17736 --- [MRIIRS] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-01T10:39:10.761+05:30  INFO 17736 --- [MRIIRS] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-04-01T10:39:10.763+05:30  INFO 17736 --- [MRIIRS] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@53fa630]]
+2025-04-01T10:39:10.765+05:30  INFO 17736 --- [MRIIRS] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-04-01T10:39:10.794+05:30  INFO 17736 --- [MRIIRS] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-01T10:39:10.810+05:30  INFO 17736 --- [MRIIRS] [main] com.example.MRIIRS.MriirsApplication     : Started MriirsApplication in 9.686 seconds (process running for 11.698)
+2025-04-01T10:39:25.199+05:30  INFO 17736 --- [MRIIRS] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-01T10:39:25.201+05:30  INFO 17736 --- [MRIIRS] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-01T10:39:25.206+05:30  INFO 17736 --- [MRIIRS] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-04-01T10:40:10.794+05:30  INFO 17736 --- [MRIIRS] [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-04-01T11:10:10.800+05:30  INFO 17736 --- [MRIIRS] [MessageBroker-2] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 12], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 1, completed tasks = 316]

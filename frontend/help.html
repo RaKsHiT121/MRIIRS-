@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            background-color: #e5ddd5;
+        }
+        .sidebar {
+            width: 30%;
+            background: #075e54;
+            padding: 15px;
+            border-right: 2px solid #ccc;
+            overflow-y: auto;
+            color: white;
+        }
+        .chat-container {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            display: none;
+            position: relative;
+        }
+        .chat-header {
+            background: #075e54;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .close-btn {
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: block; /* Ensures button is visible */
+        }
+        .query-item {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            background: #128C7E;
+            color: white;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+        .query-item:hover {
+            background: #25D366;
+        }
+        .chat-box {
+            flex-grow: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background: #e5ddd5;
+            border-left: 2px solid #ccc;
+        }
+        .message {
+            padding: 10px;
+            border-radius: 10px;
+            margin: 5px 0;
+            max-width: 70%;
+        }
+        .sent {
+            background: #dcf8c6;
+            align-self: flex-end;
+            text-align: right;
+        }
+        .received {
+            background: white;
+        }
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            background: #fff;
+            border-top: 1px solid #ddd;
+        }
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .chat-input button {
+            padding: 10px 20px;
+            background: #128C7E;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+            border-radius: 5px;
+        }
+        .ask-query-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #128C7E;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+        }
+        .ask-query-btn:hover {
+            background: #25D366;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h3>My Queries</h3>
+        <div id="query-list">
+            <p>Loading queries...</p>
+        </div>
+    </div>
+    
+    <div class="chat-container" id="chat-container">
+        <div class="chat-header">
+            <h3 id="query-title">Select a query</h3>
+            <button class="close-btn" onclick="closeChat()">Close</button>
+        </div>
+        <div class="chat-box" id="chat-box">
+            <p>No query selected. Select a chat to view it here.</p>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="message-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    
+    <button class="ask-query-btn" onclick="openQueryForm()">+</button>
+    
+    <script>
+        function openChat(queryTitle) {
+            document.getElementById("query-title").innerText = queryTitle;
+            document.getElementById("chat-box").innerHTML = `<p class="message received">Faculty: Please provide more details.</p>`;
+            document.getElementById("chat-container").style.display = "flex";
+        }
+        
+        function sendMessage() {
+            let message = document.getElementById("message-input").value;
+            if (message.trim() !== "") {
+                let chatBox = document.getElementById("chat-box");
+                let newMessage = `<p class="message sent">You: ${message}</p>`;
+                chatBox.innerHTML += newMessage;
+                document.getElementById("message-input").value = "";
+            }
+        }
+        
+        function openQueryForm() {
+            window.location.href = "original_student.html";
+        }
+        
+        function closeChat() {
+            document.getElementById("chat-container").style.display = "none";
+        }
+    </script>
+    <script src="s.js"></script>
+</body>
+</html>
